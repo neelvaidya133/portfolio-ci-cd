@@ -22,7 +22,7 @@ export default function Hero() {
       </p>
       <a
         href="#projects"
-        className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+        className="mt-6 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 hover:text-white"
       >
         View My Work
       </a>

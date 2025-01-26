@@ -113,7 +113,7 @@ export default function Modal({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-blue-500 hover:underline"
+              className="flex items-center text-blue-500 hover:underline hover:text-white"
             >
               <FaGithub className="mr-2" /> GitHub Repository
             </a>
@@ -123,7 +123,7 @@ export default function Modal({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-blue-500 hover:underline"
+              className="flex items-center text-blue-500 hover:underline hover:text-white"
             >
               <FaExternalLinkAlt className="mr-2" /> Live Demo
             </a>
