@@ -2,20 +2,106 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-textPrimary; /* Default Light Mode */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Dark Mode Styles */
+body.dark {
+  @apply bg-darkBackground text-textDark; /* Dark Mode */
+}
+
+/* Links */
+a {
+  @apply text-primary transition-colors duration-300;
+}
+
+a:hover {
+  @apply text-secondary;
+}
+
+/* Buttons */
+button {
+  @apply px-4 py-2 rounded-lg transition-colors duration-300;
+}
+
+button.primary {
+  @apply bg-primary text-white hover:bg-secondary;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold;
+}
+
+h1 {
+  @apply text-4xl lg:text-5xl;
+}
+
+h2 {
+  @apply text-3xl lg:text-4xl;
+}
+
+h3 {
+  @apply text-2xl lg:text-3xl;
+}
+
+p {
+  @apply text-base leading-relaxed;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  @apply w-full px-4 py-2 border rounded-md transition-colors duration-300;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply border-primary outline-none ring-2 ring-primary;
+}
+
+/* Utility Classes */
+.container {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 transition-all duration-300;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
 }
