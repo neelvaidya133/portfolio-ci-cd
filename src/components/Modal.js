@@ -10,6 +10,7 @@ export default function Modal({
   children,
   images,
   techStack,
+  features,
   githubUrl,
   liveUrl,
 }) {
@@ -67,44 +68,58 @@ export default function Modal({
 
         {/* Image Carousel */}
         {images && images.length > 0 && (
-          <div className="mb-6">
-            <Slider {...settings}>
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  className="flex justify-center items-center h-64 "
-                >
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div
+                key={index}
+                className="relative w-full max-w-4xl mx-auto h-[300px] flex justify-center items-center"
+              >
+                <div className="w-full h-full relative rounded-lg overflow-hidden">
                   <Image
                     src={image}
                     alt={`Slide ${index + 1}`}
-                    className="rounded-lg "
-                    width={16} // Aspect ratio width
-                    height={9} // Aspect ratio height
-                    layout="responsive"
+                    layout="fill" // Ensures the image fills the parent container
+                    objectFit="contain" // Ensures the full image is visible without cropping
                     priority={index === 0} // Preload the first image
                   />
                 </div>
-              ))}
-            </Slider>
-          </div>
+              </div>
+            ))}
+          </Slider>
         )}
 
         {/* Project Details */}
         <div>{children}</div>
+        <div className=" mt-6 flex flex-row w-full ">
+          {/* Tech Stack */}
+          {techStack && (
+            <div className=" w-1/5">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                Tech Stack
+              </h3>
+              <ul className="mt-2 list-disc list-inside text-gray-600 dark:text-gray-400">
+                {techStack.map((tech, index) => (
+                  <li key={index}>{tech}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-        {/* Tech Stack */}
-        {techStack && (
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-              Tech Stack
-            </h3>
-            <ul className="mt-2 list-disc list-inside text-gray-600 dark:text-gray-400">
-              {techStack.map((tech, index) => (
-                <li key={index}>{tech}</li>
-              ))}
-            </ul>
+          <div className="w-4/5 flex flex-col flex-wrap">
+            {features && (
+              <div className=" w-2/5">
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                  Features
+                </h3>
+                <ul className="mt-2 list-disc list-inside text-gray-600 dark:text-gray-400">
+                  {features.map((tech, index) => (
+                    <li key={index}>{tech}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-        )}
+        </div>
 
         {/* Footer Links */}
         <div className="mt-8 flex space-x-4">
