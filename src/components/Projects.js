@@ -25,26 +25,50 @@ export default function Projects() {
         "/images/projects/tailor/tailor-5.png",
         "/images/projects/tailor/tailor-6.png",
       ],
-      techStack: ["React.js", "Node.js", "PostgreSQL", "GraphQL"],
+      techStack: [
+        "React.js",
+        "Node.js",
+        "PostgreSQL",
+        "GraphQL",
+        "AWS RDS",
+        "Docker",
+      ],
       githubUrl: "https://github.com/neelvaidya133/Tailor",
       liveUrl: "https://tailor-beta.vercel.app/",
       features: [
         "User authentication",
-        "Order status",
         "PDF invoice generation",
         "Multiple Shop Management",
         "Customer Management",
-        "Product Price Management",
       ],
     },
     {
       title: "Social Media App",
       details:
         "A modern social media platform where users can follow, share thoughts, use hashtags, and explore trending topics.",
-      images: ["/images/social-media-1.png", "/images/social-media-2.png"],
-      techStack: ["Next.js", "Prisma", "PostgreSQL", "TailwindCSS"],
-      githubUrl: "https://github.com/your-repo/social-media-app",
+      images: [
+        "/images/projects/nerves/nerves-1.png",
+        "/images/projects/nerves/nerves-2.png",
+        "/images/projects/nerves/nerves-3.png",
+      ],
+      techStack: [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL",
+        "TailwindCSS",
+        "TypeScript",
+        "React.js",
+        "GraphQL",
+      ],
+      githubUrl: "https://github.com/neelvaidya133/Nerves",
       liveUrl: "https://nerves.neelvaidya.com/",
+      features: [
+        "Post text",
+        "Follow users",
+        "Hashtags",
+        "Infinite scroll",
+        "Content caching",
+      ],
     },
     {
       title: "Devops Alerting System",
@@ -52,56 +76,81 @@ export default function Projects() {
         "A real-time alerting system that notifies developers about server issues and performance metrics.",
       images: [
         "/images/projects/devopsMon/dev-1.png",
-        "/images/projects/devopsMon/dev-2.png",
+        "/images/projects/devopsMon/dev-1.png",
       ],
-      techStack: ["Node.js, Kubernetes", "Prometheus", "Grafana", "docker"],
+      techStack: ["Node.js", "Kubernetes", "Prometheus", "Grafana", "Docker"],
       githubUrl:
         "https://github.com/neelvaidya133/devops-monitoring-and-alerting-system",
       liveUrl: "",
+      features: [
+        "Real-time alerts",
+        "Server issue detection",
+        "Performance monitoring",
+        "Developer notifications",
+        "Customizable alert rules",
+      ],
     },
     {
       title: "Instagram Scrapper Bot",
       details:
         "A bot that scrapes Instagram profiles and downloads images, videos, reels, highlights, stories and send to telegram bot.",
-      images: ["/images/instagram-1.png", "/images/instagram-2.png"],
+      images: [
+        "/images/projects/instaScrap/insta-1.jpg",
+        "/images/projects/instaScrap/insta-2.jpg",
+      ],
       techStack: [
         "Python",
         "Instaloader API",
-        "Telegram Bot API, GitHub Actions",
+        "Telegram Bot API",
+        "GitHub Actions",
       ],
       githubUrl: "https://github.com/neelvaidya133/instaScrapper",
+      features: [
+        "Scrape user profiles",
+        "Send data to Telegram bot directly",
+        "Supports 2FA login",
+        "Scrape reels and stories",
+        "Scrape highlights, posts and tagged posts",
+      ],
     },
     {
       title: "Devetree ",
       details:
         "A Company portfolio website for Devetree Technologies. It's a website for a company that provides services like web development, mobile app development, and digital marketing.",
       images: [
-        "/images/projects/devetree/devetree-1.png",
-        "/images/projects/devetree/devetree-2.png",
+        "/images/projects/devetree/dev-1.png",
+        "/images/projects/devetree/dev-2.png",
+        "/images/projects/devetree/dev3.png",
       ],
-      techStack: ["React.js", "TailwindCSS"],
-      githubUrl: "https://github.com/neelvaidya133/devtree2",
+      techStack: ["React.js", "JavaScript", "Styled-components", "Firebase"],
+      githubUrl: "https://github.com/neelvaidya133/Devetree2",
       liveUrl: "https://devetree.com/",
-    },
-    {
-      title: "Crypto portfolio tracker",
-      details:
-        "A simple web app to track your crypto portfolio. You can add your transactions and track your profit/loss.",
-      images: [
-        "/images/projects/crypto-1.png",
-        "/images/projects/crypto-2.png",
+      features: [
+        "Responsive and optimized design",
+        "SEO-friendly architecture",
+        "Fast loading speeds",
+        "Secure resume storage in Firebase",
       ],
-      techStack: [
-        "GO lang",
-        "Next.js",
-        "TailwindCSS",
-        "AWS",
-        "PostgreSQL",
-        "OAuth",
-      ],
-      githubUrl: "https://github.com/neelvaidya133/crypto-tracker",
-      liveUrl: "https://crypto.neelvaidya.com",
     },
+    // {
+    //   title: "Crypto portfolio tracker",
+    //   details:
+    //     "A simple web app to track your crypto portfolio. You can add your transactions and track your profit/loss.",
+    //   images: [
+    //     "/images/projects/crypto-1.png",
+    //     "/images/projects/crypto-2.png",
+    //   ],
+    //   techStack: [
+    //     "GO lang",
+    //     "Next.js",
+    //     "TailwindCSS",
+    //     "AWS",
+    //     "PostgreSQL",
+    //     "OAuth",
+    //   ],
+    //   githubUrl: "https://github.com/neelvaidya133/crypto-tracker",
+    //   liveUrl: "https://crypto.neelvaidya.com",
+    // },
   ];
 
   return (

@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Time and Date in Top Left */}
 
       {/* Main Content */}
-      <h1 className="text-5xl font-extrabold text-gray-800 dark:text-gray-200">
+      <h1 className="text-5xl font-extrabold text-gray-800 dark:text-gray-200  text-center">
         Hi, I'm{" "}
         <span className="text-blue-500 dark:text-darkBlueHighlight">
           Neel Vaidya

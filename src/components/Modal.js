@@ -90,35 +90,39 @@ export default function Modal({
 
         {/* Project Details */}
         <div>{children}</div>
-        <div className=" mt-6 flex flex-row w-full ">
+        <div className="mt-6 w-full flex flex-col">
           {/* Tech Stack */}
           {techStack && (
-            <div className=" w-1/5">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+            <div className="w-full">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
                 Tech Stack
               </h3>
-              <ul className="mt-2 list-disc list-inside text-gray-600 dark:text-gray-400">
+              <div className="flex flex-wrap gap-4 text-gray-600 dark:text-gray-400">
                 {techStack.map((tech, index) => (
-                  <li key={index}>{tech}</li>
+                  <span
+                    key={index}
+                    className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-lg"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Features */}
+          {features && (
+            <div className="mt-6 w-full">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                Features
+              </h3>
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+                {features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
                 ))}
               </ul>
             </div>
           )}
-
-          <div className="w-4/5 flex flex-col flex-wrap">
-            {features && (
-              <div className=" w-2/5">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
-                  Features
-                </h3>
-                <ul className="mt-2 list-disc list-inside text-gray-600 dark:text-gray-400">
-                  {features.map((tech, index) => (
-                    <li key={index}>{tech}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
         </div>
 
         {/* Footer Links */}
@@ -128,7 +132,7 @@ export default function Modal({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-blue-500 hover:underline hover:text-white"
+              className="flex items-center text-blue-500 hover:underline"
             >
               <FaGithub className="mr-2" /> GitHub Repository
             </a>
@@ -138,7 +142,7 @@ export default function Modal({
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-blue-500 hover:underline hover:text-white"
+              className="flex items-center text-blue-500 hover:underline"
             >
               <FaExternalLinkAlt className="mr-2" /> Live Demo
             </a>
