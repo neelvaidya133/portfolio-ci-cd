@@ -39,7 +39,7 @@ export default function Modal({
     >
       {/* Modal Content */}
       <div
-        className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg w-full max-w-4xl p-6 relative"
+        className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg w-full max-w-lg sm:max-w-2xl md:max-w-3xl lg:max-w-4xl overflow-x-hidden h-auto max-h-[90vh] overflow-y-auto p-6 relative"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
       >
         {/* Close Button */}
@@ -88,8 +88,6 @@ export default function Modal({
           </Slider>
         )}
 
-        {/* Project Details */}
-        <div>{children}</div>
         <div className="mt-6 w-full flex flex-col">
           {/* Tech Stack */}
           {techStack && (

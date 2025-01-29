@@ -74,7 +74,7 @@ export default function Journey() {
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {milestone.description}
               </p>
-              <div className="flex flex-row  mt-4 w-1/3 justify-between">
+              <div className="flex flex-row  mt-4 md:w-1/3 justify-between">
                 <span className="text-xs text-gray-500 dark:text-gray-500 w-1/2">
                   {milestone.date}
                 </span>
