@@ -1,40 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+This is my personal portfolio website built using Next.js. The project showcases my skills, experience, and projects in a visually appealing and interactive manner.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js** for SSR & SSG
+- **Styled with Tailwind CSS**
+- **Dark/Light mode support**
+- **Optimized performance & SEO**
+- **Contact form integration**
+- **Dynamic project showcase**
+- **CI/CD with GitHub Actions**
+
+
+## 🌍 Live Project
+
+Check out the live project here: [neelvaidya.com](https://neelvaidya.com)
+
+
+## 📂 Project Structure
+
+```
+├── public       # Static assets
+├── src
+│   ├── components  # Reusable components
+│   ├── pages       # Next.js pages
+│   ├── styles      # Global styles
+├── .github        # GitHub Actions workflows
+└── README.md       # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ CI/CD with GitHub Actions
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The project is configured with GitHub Actions for automated deployment. The workflow includes:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Running lint checks
+- Running unit tests
+- Building the application
+- Deploying to Vercel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Workflow File: `.github/workflows/deploy.yml`
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```yaml
+name: Deploy Portfolio
 
-## Learn More
+on:
+  push:
+    branches:
+      - main
 
-To learn more about Next.js, take a look at the following resources:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: Build project
+        run: npm run build
+      - name: Deploy to Vercel
+        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## 📦 Installation & Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Clone the Repository
 
-## Deploy on Vercel
+```sh
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Install Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+```sh
+npm install
+```
+
+### Run Locally
+
+```sh
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Made with ❤️ by **Neel Vaidya**
