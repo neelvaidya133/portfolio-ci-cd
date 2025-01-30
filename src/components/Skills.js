@@ -33,7 +33,7 @@ export default function SkillsCertifications() {
       title: "Terraform Certified Associate",
       date: "2025",
       image: "/images/terraform.png", // HashiCorp logo
-      link: "https://www.credly.com/earner/earned/badge/bc1b715f-4401-4272-85d1-7024b3fcae69", // Replace with your certification link
+      link: "https://www.credly.com/badges/bc1b715f-4401-4272-85d1-7024b3fcae69/public_url", // Replace with your certification link
     },
   ];
 
