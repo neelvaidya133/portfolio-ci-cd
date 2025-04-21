@@ -14,6 +14,64 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "The Ford Guys",
+      details:
+        "A modern automotive service website for a professional Ford specialist garage. The website serves as a central hub for customer engagement and service management.",
+      images: [
+        "/images/projects/fordguys/home.png",
+        "/images/projects/fordguys/about.png",
+        "/images/projects/fordguys/map.png",
+      ],
+      techStack: [
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "Node.js",
+        "Framer Motion",
+      ],
+
+      liveUrl: "https://thefordguys.ca",
+      features: [
+        "Custom appointment scheduling system with calendar integration",
+        "Responsive design with modern UI/UX principles",
+        "SEO-optimized content structure with 95+ PageSpeed score",
+        "Real-time service availability checking",
+        "Integrated contact form with email notifications",
+        "Dynamic service catalog with detailed descriptions",
+        "Google Analytics integration for conversion tracking",
+        "Optimized image loading with lazy loading",
+        "Mobile-first approach with cross-browser compatibility",
+      ],
+    },
+    {
+      title: "Social Media App",
+      details:
+        "A modern social media platform where users can follow, share thoughts, use hashtags, and explore trending topics.",
+      images: [
+        "/images/projects/nerves/nerves-1.png",
+        "/images/projects/nerves/nerves-2.png",
+        "/images/projects/nerves/nerves-3.png",
+      ],
+      techStack: [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL",
+        "TailwindCSS",
+        "TypeScript",
+        "React.js",
+        "GraphQL",
+      ],
+      githubUrl: "https://github.com/neelvaidya133/Nerves",
+      liveUrl: "https://nerves.neelvaidya.com/",
+      features: [
+        "Post text",
+        "Follow users",
+        "Hashtags",
+        "Infinite scroll",
+        "Content caching",
+      ],
+    },
+    {
       title: "Tailor's Data",
       details:
         "A full-stack application designed to help users manage multiple shops efficiently. Features include user authentication, order tracking, and PDF invoice generation.",
@@ -43,31 +101,22 @@ export default function Projects() {
       ],
     },
     {
-      title: "Social Media App",
+      title: "Devetree ",
       details:
-        "A modern social media platform where users can follow, share thoughts, use hashtags, and explore trending topics.",
+        "A Company portfolio website for Devetree Technologies. It's a website for a company that provides services like web development, mobile app development, and digital marketing.",
       images: [
-        "/images/projects/nerves/nerves-1.png",
-        "/images/projects/nerves/nerves-2.png",
-        "/images/projects/nerves/nerves-3.png",
+        "/images/projects/devetree/dev-1.png",
+        "/images/projects/devetree/dev-2.png",
+        "/images/projects/devetree/dev3.png",
       ],
-      techStack: [
-        "Next.js",
-        "Prisma",
-        "PostgreSQL",
-        "TailwindCSS",
-        "TypeScript",
-        "React.js",
-        "GraphQL",
-      ],
-      githubUrl: "https://github.com/neelvaidya133/Nerves",
-      liveUrl: "https://nerves.neelvaidya.com/",
+      techStack: ["React.js", "JavaScript", "Styled-components", "Firebase"],
+      githubUrl: "https://github.com/neelvaidya133/Devetree2",
+      liveUrl: "https://devetree.com/",
       features: [
-        "Post text",
-        "Follow users",
-        "Hashtags",
-        "Infinite scroll",
-        "Content caching",
+        "Responsive and optimized design",
+        "SEO-friendly architecture",
+        "Fast loading speeds",
+        "Secure resume storage in Firebase",
       ],
     },
     {
@@ -113,44 +162,6 @@ export default function Projects() {
         "Scrape highlights, posts and tagged posts",
       ],
     },
-    {
-      title: "Devetree ",
-      details:
-        "A Company portfolio website for Devetree Technologies. It's a website for a company that provides services like web development, mobile app development, and digital marketing.",
-      images: [
-        "/images/projects/devetree/dev-1.png",
-        "/images/projects/devetree/dev-2.png",
-        "/images/projects/devetree/dev3.png",
-      ],
-      techStack: ["React.js", "JavaScript", "Styled-components", "Firebase"],
-      githubUrl: "https://github.com/neelvaidya133/Devetree2",
-      liveUrl: "https://devetree.com/",
-      features: [
-        "Responsive and optimized design",
-        "SEO-friendly architecture",
-        "Fast loading speeds",
-        "Secure resume storage in Firebase",
-      ],
-    },
-    // {
-    //   title: "Crypto portfolio tracker",
-    //   details:
-    //     "A simple web app to track your crypto portfolio. You can add your transactions and track your profit/loss.",
-    //   images: [
-    //     "/images/projects/crypto-1.png",
-    //     "/images/projects/crypto-2.png",
-    //   ],
-    //   techStack: [
-    //     "GO lang",
-    //     "Next.js",
-    //     "TailwindCSS",
-    //     "AWS",
-    //     "PostgreSQL",
-    //     "OAuth",
-    //   ],
-    //   githubUrl: "https://github.com/neelvaidya133/crypto-tracker",
-    //   liveUrl: "https://crypto.neelvaidya.com",
-    // },
   ];
 
   return (
